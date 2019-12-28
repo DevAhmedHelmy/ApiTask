@@ -20,31 +20,30 @@ Route::group(['middleware' => 'cors'], function () {
     Route::get('/customers/{customer}','CustomerController@show');
 
     Route::get('/actions','ActionController@index');
-    Route::get('/customers/{customer}','CustomerController@show');
+    Route::get('/actions/{action}','ActionController@show');
     
 });
 
 Route::group(['middleware' => 'postCors'], function () {
-    Route::post('login', 'AuthController@login');
-    Route::group([
+    Route::post('login', 'AuthController@login')->name('login');
+    Route::post('signup', 'AuthController@signup')->name('signup');
 
+    Route::group([
         'middleware' => 'api',
         'prefix' => 'auth'
-    
-    ], function ($router) {
+    ], function () {
     
      
         Route::post('logout', 'AuthController@logout');
-        Route::post('siginup', 'AuthController@logout');
-        Route::post('refresh', 'AuthController@refresh');
-        Route::post('me', 'AuthController@me');
+        
+         
     
     });
 });
 
 
 
-Route::apiResource('customers', 'CustomerController');
+// Route::apiResource('customers', 'CustomerController');
 
-Route::apiResource('actions', 'ActionController');
+// Route::apiResource('actions', 'ActionController');
  
