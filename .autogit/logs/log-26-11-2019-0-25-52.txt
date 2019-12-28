@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Thu Dec 26 2019 00:25:52 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Customer.php
+* app/Http/Controllers/CustomerController.php
+* tests/Feature/CustomerTest.php
+
+
+Created files:
+* .autogit/logs/log-25-11-2019-23-55-47.txt
+
+
+Deleted files:
+
+
+Renamed files:

@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Wed Dec 25 2019 23:25:39 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* tests/Feature/CustomerTest.php
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Wed Dec 25 2019 23:55:47 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/CustomerController.php
+* phpunit.xml
+* tests/Feature/CustomerTest.php
+
+
+Created files:
+* .autogit/logs/log-25-11-2019-23-25-39.txt
+
+
+Deleted files:
+
+
+Renamed files:
