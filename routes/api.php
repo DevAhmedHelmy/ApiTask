@@ -13,19 +13,36 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::group([
 
-    'middleware' => 'api',
-    'prefix' => 'auth'
 
-], function ($router) {
+Route::group(['middleware' => 'cors'], function () {
+    Route::get('/customers','CustomerController@index');
+    Route::get('/customers/{customer}','CustomerController@show');
 
-    Route::post('login', 'AuthController@login');
-    Route::post('logout', 'AuthController@logout');
-    Route::post('refresh', 'AuthController@refresh');
-    Route::post('me', 'AuthController@me');
-
+    Route::get('/actions','ActionController@index');
+    Route::get('/customers/{customer}','CustomerController@show');
+    
 });
+
+Route::group(['middleware' => 'postCors'], function () {
+    Route::post('login', 'AuthController@login');
+    Route::group([
+
+        'middleware' => 'api',
+        'prefix' => 'auth'
+    
+    ], function ($router) {
+    
+     
+        Route::post('logout', 'AuthController@logout');
+        Route::post('siginup', 'AuthController@logout');
+        Route::post('refresh', 'AuthController@refresh');
+        Route::post('me', 'AuthController@me');
+    
+    });
+});
+
+
 
 Route::apiResource('customers', 'CustomerController');
 
